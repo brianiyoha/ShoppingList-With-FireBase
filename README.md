@@ -1,26 +1,39 @@
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
+This is a shopping list app with firebase realtime database.
 
-## How to use this template
+## How To Use This App
 
-*This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
+To use this app, either create a new ionic project using the ionic node.js utility, or copy the files from this repository to your pc.
 
-To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/ionic-team/ionic2-app-base).
+*You Have to create a file named firebase.config.ts in the src/app and export your firebase configuration like this*
+```ts
+ // Initialize Firebase
+    export const FIREBASE_CONFIG = {
+    apiKey: "<API-KEY>",
+    authDomain: "<AUTHDOMAIN>.firebaseapp.com",
+    databaseURL: "https://<AUTHDOMAIN>.firebaseio.com",
+    projectId: "<PROJECT-ID>",
+    storageBucket: "",
+    messagingSenderId: "<MESSAGE-SENDER-ID>"
+  };
+```
 
-### With the Ionic CLI:
 
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
+### To Install Ionic Using npm CLI:
 
 ```bash
 $ sudo npm install -g ionic cordova
-$ ionic start myBlank blank
 ```
 
-Then, to run it, cd into `myBlank` and run:
+Then, to run it, cd into `shoppinglist` and run:
 
 ```bash
-$ ionic cordova platform add ios
-$ ionic cordova run ios
+$ ionic cordova platform add android
+$ ionic cordova run android
+```
+To run on a web browser, cd into `shoppinglist` and run:
+
+```bash
+$ ionic serve
 ```
 
-Substitute ios for android if not on a Mac.
 
